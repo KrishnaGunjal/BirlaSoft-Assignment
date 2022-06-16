@@ -6,31 +6,58 @@
 //
 
 import Foundation
+import CoreData
 
-// MARK: - Employee
-struct Employee: Codable {
-    let page, perPage, totalrecord, totalPages: Int
-    let data: [EmployeeDetails]
-
-    enum CodingKeys: String, CodingKey {
-        case page
-        case perPage = "per_page"
-        case totalrecord
-        case totalPages = "total_pages"
-        case data
-    }
+protocol DataViewModelDelegate {
+    func dataRefreshSuccess()
+    func dataFetchError(error: DataError)
 }
 
-// MARK: - Datum
-struct EmployeeDetails: Codable {
-    let id: Int
-    let touristName, touristEmail, touristLocation, createdat: String
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case touristName = "tourist_name"
-        case touristEmail = "tourist_email"
-        case touristLocation = "tourist_location"
-        case createdat
+class ViewModel: NSObject {
+    let persistentContainer = NSPersistentContainer(name: "BirlaSoft_Assignment")
+//    let context = AppDelegate.persistentContainer.viewContext
+    private var apiServices: APIService!
+    var dataViewModelDelegate: DataViewModelDelegate?
+    var employeeData = [EmployeeDetails]()
+    
+    private var persistantDataList = [EmployeeDetails]() {
+        didSet {
+            setData()
+        }
     }
+    
+    fileprivate func setData() {
+        self.employeeData = persistantDataList
+        self.dataViewModelDelegate?.dataRefreshSuccess()
+    }
+    
+    public func getDataList() -> Void {
+        APIService().getData{ (result) in
+            switch result {
+            case .failure(let error):
+                print(error.localizedDescription)
+                self.dataViewModelDelegate?.dataFetchError(error: error)
+                
+            case .success(let dataList):
+                self.persistantDataList = dataList.data
+//                try? self.saveData(data: dataList)
+                self.dataViewModelDelegate?.dataRefreshSuccess()
+            }
+        }
+    }
+    
+//    private func saveData(data: [EmployeeDetails]) throws {
+//        let album = AlbumDatabase(context: self.context)
+//        for item in data {
+//            album.albumTitle = item.title
+//            album.albumThumbnail = item.thumbnailUrl
+//            album.albumId = item.albumId!
+//            album.id = item.id!
+//            album.imageUrl = item.url
+//
+//            self.context.insert(album)
+//            try self.context.save()
+//        }
+//    }
+    
 }

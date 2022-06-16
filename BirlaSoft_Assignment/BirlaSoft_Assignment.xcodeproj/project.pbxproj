@@ -19,6 +19,7 @@
 		7A5E62D5285B74A900D34A93 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62D4285B74A900D34A93 /* ViewModel.swift */; };
 		7A5E62D9285B75DB00D34A93 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62D7285B75DB00D34A93 /* EmployeeCell.swift */; };
 		7A5E62DA285B75DB00D34A93 /* EmployeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A5E62D8285B75DB00D34A93 /* EmployeeCell.xib */; };
+		7A5E62DD285B79A400D34A93 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62DC285B79A400D34A93 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7A5E62D4285B74A900D34A93 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		7A5E62D7285B75DB00D34A93 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		7A5E62D8285B75DB00D34A93 /* EmployeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeCell.xib; sourceTree = "<group>"; };
+		7A5E62DC285B79A400D34A93 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		7A5E62B4285B740800D34A93 /* BirlaSoft_Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				7A5E62DE285B79A800D34A93 /* APIService */,
 				7A5E62D2285B747500D34A93 /* View Controllers */,
 				7A5E62D3285B748500D34A93 /* Storyboards */,
 				7A5E62DB285B75DF00D34A93 /* Custom Cells */,
@@ -131,6 +134,14 @@
 				7A5E62D8285B75DB00D34A93 /* EmployeeCell.xib */,
 			);
 			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		7A5E62DE285B79A800D34A93 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				7A5E62DC285B79A400D34A93 /* APIService.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 				7A5E62B8285B740800D34A93 /* SceneDelegate.swift in Sources */,
 				7A5E62D9285B75DB00D34A93 /* EmployeeCell.swift in Sources */,
 				7A5E62D0285B745D00D34A93 /* Constants.swift in Sources */,
+				7A5E62DD285B79A400D34A93 /* APIService.swift in Sources */,
 				7A5E62D5285B74A900D34A93 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
