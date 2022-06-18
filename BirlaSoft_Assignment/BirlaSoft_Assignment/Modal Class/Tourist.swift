@@ -21,7 +21,7 @@ struct Tourist: Codable {
     }
 }
 
-// MARK: - Datum
+// MARK: - TouristDetails
 struct TouristDetails: Codable {
     let id: Int
     let touristName, touristEmail, touristLocation, createdat: String
