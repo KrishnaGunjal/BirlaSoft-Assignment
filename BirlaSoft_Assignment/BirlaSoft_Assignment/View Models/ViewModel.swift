@@ -15,7 +15,7 @@ protocol DataViewModelDelegate {
 }
 
 class ViewModel: NSObject {
-    static let persistentContainer = NSPersistentContainer(name: "BirlaSoft_Assignment")
+    static let persistentContainer = NSPersistentContainer(name: Constants.managedObjectModel)
     let context = ((UIApplication.shared.delegate) as!  AppDelegate).persistentContainer.viewContext
     private var apiServices: APIService!
     var dataViewModelDelegate: DataViewModelDelegate?

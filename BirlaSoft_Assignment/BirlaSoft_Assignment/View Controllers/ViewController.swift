@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
     
     func CheckForLocalData() {
-        let Count = try? context.count(for: NSFetchRequest(entityName: "TouristDatabase"))
+        let Count = try? context.count(for: NSFetchRequest(entityName: Constants.entityName))
         if (Count == 0) {
             viewModel.getDataList()
         }else {
@@ -54,7 +54,7 @@ extension ViewController: DataViewModelDelegate {
     }
     
     func fetchData() -> [Any]? {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "TouristDatabase")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.entityName)
         
         do{
             let result = try self.context.fetch(fetchRequest)
