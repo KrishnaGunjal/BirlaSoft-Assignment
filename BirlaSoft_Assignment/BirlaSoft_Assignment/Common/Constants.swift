@@ -9,7 +9,6 @@ import Foundation
 
 struct Constants {
     static let apiService = "http://restapi.adequateshop.com/api/Tourist?page=1"
-    static let placeholderImage = "placeholder.png"
 }
 
 struct reuseIdentifiers {

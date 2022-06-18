@@ -8,9 +8,9 @@
 import Foundation
 
 // MARK: - Employee
-struct Employee: Codable {
+struct Tourist: Codable {
     let page, perPage, totalrecord, totalPages: Int
-    let data: [EmployeeDetails]
+    let data: [TouristDetails]
 
     enum CodingKeys: String, CodingKey {
         case page
@@ -22,7 +22,7 @@ struct Employee: Codable {
 }
 
 // MARK: - Datum
-struct EmployeeDetails: Codable {
+struct TouristDetails: Codable {
     let id: Int
     let touristName, touristEmail, touristLocation, createdat: String
 

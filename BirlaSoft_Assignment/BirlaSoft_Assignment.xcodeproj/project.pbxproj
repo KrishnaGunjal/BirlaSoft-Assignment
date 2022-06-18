@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A020B4E285D917E00F8DA6C /* TouristDatabase+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A020B4C285D917E00F8DA6C /* TouristDatabase+CoreDataClass.swift */; };
+		7A020B4F285D917E00F8DA6C /* TouristDatabase+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A020B4D285D917E00F8DA6C /* TouristDatabase+CoreDataProperties.swift */; };
+		7A3ED5F2285C3571006C09D2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3ED5F1285C3571006C09D2 /* DetailsViewController.swift */; };
 		7A5E62B6285B740800D34A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62B5285B740800D34A93 /* AppDelegate.swift */; };
 		7A5E62B8285B740800D34A93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62B7285B740800D34A93 /* SceneDelegate.swift */; };
 		7A5E62BA285B740800D34A93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62B9285B740800D34A93 /* ViewController.swift */; };
@@ -14,7 +17,7 @@
 		7A5E62C0285B740800D34A93 /* BirlaSoft_Assignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62BE285B740800D34A93 /* BirlaSoft_Assignment.xcdatamodeld */; };
 		7A5E62C2285B740B00D34A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5E62C1285B740B00D34A93 /* Assets.xcassets */; };
 		7A5E62C5285B740B00D34A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5E62C3285B740B00D34A93 /* LaunchScreen.storyboard */; };
-		7A5E62CD285B744300D34A93 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62CC285B744300D34A93 /* Employee.swift */; };
+		7A5E62CD285B744300D34A93 /* Tourist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62CC285B744300D34A93 /* Tourist.swift */; };
 		7A5E62D0285B745D00D34A93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62CF285B745D00D34A93 /* Constants.swift */; };
 		7A5E62D5285B74A900D34A93 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62D4285B74A900D34A93 /* ViewModel.swift */; };
 		7A5E62D9285B75DB00D34A93 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E62D7285B75DB00D34A93 /* EmployeeCell.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A020B4C285D917E00F8DA6C /* TouristDatabase+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TouristDatabase+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7A020B4D285D917E00F8DA6C /* TouristDatabase+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TouristDatabase+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7A3ED5F1285C3571006C09D2 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		7A5E62B2285B740800D34A93 /* BirlaSoft_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirlaSoft_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5E62B5285B740800D34A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A5E62B7285B740800D34A93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +38,7 @@
 		7A5E62C1285B740B00D34A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A5E62C4285B740B00D34A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A5E62C6285B740B00D34A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A5E62CC285B744300D34A93 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		7A5E62CC285B744300D34A93 /* Tourist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tourist.swift; sourceTree = "<group>"; };
 		7A5E62CF285B745D00D34A93 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7A5E62D4285B74A900D34A93 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		7A5E62D7285B75DB00D34A93 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
@@ -51,6 +57,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A020B50285DCC2E00F8DA6C /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				7A5E62BE285B740800D34A93 /* BirlaSoft_Assignment.xcdatamodeld */,
+				7A020B4C285D917E00F8DA6C /* TouristDatabase+CoreDataClass.swift */,
+				7A020B4D285D917E00F8DA6C /* TouristDatabase+CoreDataProperties.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		7A5E62A9285B740800D34A93 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +86,7 @@
 		7A5E62B4285B740800D34A93 /* BirlaSoft_Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				7A020B50285DCC2E00F8DA6C /* Core Data */,
 				7A5E62DE285B79A800D34A93 /* APIService */,
 				7A5E62D2285B747500D34A93 /* View Controllers */,
 				7A5E62D3285B748500D34A93 /* Storyboards */,
@@ -77,9 +94,6 @@
 				7A5E62D6285B74AE00D34A93 /* View Models */,
 				7A5E62D1285B746100D34A93 /* Common */,
 				7A5E62CE285B744B00D34A93 /* Modal Class */,
-				7A5E62C3285B740B00D34A93 /* LaunchScreen.storyboard */,
-				7A5E62C6285B740B00D34A93 /* Info.plist */,
-				7A5E62BE285B740800D34A93 /* BirlaSoft_Assignment.xcdatamodeld */,
 			);
 			path = BirlaSoft_Assignment;
 			sourceTree = "<group>";
@@ -87,7 +101,7 @@
 		7A5E62CE285B744B00D34A93 /* Modal Class */ = {
 			isa = PBXGroup;
 			children = (
-				7A5E62CC285B744300D34A93 /* Employee.swift */,
+				7A5E62CC285B744300D34A93 /* Tourist.swift */,
 			);
 			path = "Modal Class";
 			sourceTree = "<group>";
@@ -95,6 +109,8 @@
 		7A5E62D1285B746100D34A93 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7A5E62C6285B740B00D34A93 /* Info.plist */,
+				7A5E62C3285B740B00D34A93 /* LaunchScreen.storyboard */,
 				7A5E62B5285B740800D34A93 /* AppDelegate.swift */,
 				7A5E62B7285B740800D34A93 /* SceneDelegate.swift */,
 				7A5E62C1285B740B00D34A93 /* Assets.xcassets */,
@@ -106,6 +122,7 @@
 		7A5E62D2285B747500D34A93 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7A3ED5F1285C3571006C09D2 /* DetailsViewController.swift */,
 				7A5E62B9285B740800D34A93 /* ViewController.swift */,
 			);
 			path = "View Controllers";
@@ -219,12 +236,15 @@
 				7A5E62BA285B740800D34A93 /* ViewController.swift in Sources */,
 				7A5E62C0285B740800D34A93 /* BirlaSoft_Assignment.xcdatamodeld in Sources */,
 				7A5E62B6285B740800D34A93 /* AppDelegate.swift in Sources */,
-				7A5E62CD285B744300D34A93 /* Employee.swift in Sources */,
+				7A5E62CD285B744300D34A93 /* Tourist.swift in Sources */,
 				7A5E62B8285B740800D34A93 /* SceneDelegate.swift in Sources */,
+				7A020B4F285D917E00F8DA6C /* TouristDatabase+CoreDataProperties.swift in Sources */,
 				7A5E62D9285B75DB00D34A93 /* EmployeeCell.swift in Sources */,
 				7A5E62D0285B745D00D34A93 /* Constants.swift in Sources */,
 				7A5E62DD285B79A400D34A93 /* APIService.swift in Sources */,
+				7A020B4E285D917E00F8DA6C /* TouristDatabase+CoreDataClass.swift in Sources */,
 				7A5E62D5285B74A900D34A93 /* ViewModel.swift in Sources */,
+				7A3ED5F2285C3571006C09D2 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

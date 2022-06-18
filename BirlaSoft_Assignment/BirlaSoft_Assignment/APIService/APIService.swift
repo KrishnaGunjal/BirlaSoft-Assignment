@@ -16,7 +16,7 @@ enum DataError: Error {
 
 class APIService {
     
-    func getData(completion: @escaping(Result<Employee, DataError>) -> Void) {
+    func getData(completion: @escaping(Result<Tourist, DataError>) -> Void) {
         // The URI can be accepted from ViewModel if API has to be written more generic.
         // Same goes for API response parsing and model class array generation.
         let urlString = Constants.apiService
@@ -35,7 +35,7 @@ class APIService {
             do {
                 // Decode the json data.
                 let decoder = JSONDecoder()
-                let response = try decoder.decode(Employee.self, from: data)
+                let response = try decoder.decode(Tourist.self, from: data)
                 completion(.success(response))
             } catch {
                 print(error)

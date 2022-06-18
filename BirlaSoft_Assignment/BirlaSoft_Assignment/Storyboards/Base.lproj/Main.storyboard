@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eij-5E-U2z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wle-Kg-I1f">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="o3W-N3-z4a"/>
@@ -34,13 +34,141 @@
                             <constraint firstItem="wle-Kg-I1f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zBn-hn-3Sq"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1J8-vI-8HF"/>
                     <connections>
                         <outlet property="tableView" destination="wle-Kg-I1f" id="i4U-K3-eN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45" y="68"/>
+            <point key="canvasLocation" x="955.07246376811599" y="67.633928571428569"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="H2o-lq-Vnt">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="eWd-7z-arW" customClass="DetailsViewController" customModule="BirlaSoft_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aRk-Ox-AIK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4CW-gl-rwc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tourist Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ueb-k8-jGA">
+                                        <rect key="frame" x="139.5" y="5" width="135" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-VM-sN7">
+                                        <rect key="frame" x="10" y="39" width="126" height="112"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq7-px-Xog">
+                                                <rect key="frame" x="0.0" y="0.0" width="21" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tourist Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXD-SD-FDd">
+                                                <rect key="frame" x="0.0" y="30.5" width="105.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tourist Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnd-sZ-wSj">
+                                                <rect key="frame" x="0.0" y="61" width="101.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tourist Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fD-YC-Skn">
+                                                <rect key="frame" x="0.0" y="91.5" width="126" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6bY-kV-1Sf">
+                                        <rect key="frame" x="146" y="39" width="258" height="112"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xc-OD-MuY">
+                                                <rect key="frame" x="0.0" y="0.0" width="21" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tourist Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzJ-Ar-3Xl">
+                                                <rect key="frame" x="0.0" y="30.5" width="105.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tourist Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-fr-gl0">
+                                                <rect key="frame" x="0.0" y="61" width="101.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tourist Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdo-oa-sVV">
+                                                <rect key="frame" x="0.0" y="91.5" width="126" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="JoS-VM-sN7" firstAttribute="leading" secondItem="4CW-gl-rwc" secondAttribute="leading" constant="10" id="DI7-IY-P1e"/>
+                                    <constraint firstAttribute="height" constant="250" id="Erd-WZ-Odt"/>
+                                    <constraint firstItem="6bY-kV-1Sf" firstAttribute="leading" secondItem="4CW-gl-rwc" secondAttribute="leading" constant="146" id="KjS-Sh-Yhl"/>
+                                    <constraint firstAttribute="trailing" secondItem="6bY-kV-1Sf" secondAttribute="trailing" constant="10" id="Mj4-VE-A9Y"/>
+                                    <constraint firstItem="6bY-kV-1Sf" firstAttribute="leading" secondItem="JoS-VM-sN7" secondAttribute="trailing" constant="10" id="ZFT-CN-nEa"/>
+                                    <constraint firstItem="Ueb-k8-jGA" firstAttribute="centerX" secondItem="4CW-gl-rwc" secondAttribute="centerX" id="b8s-X9-TJg"/>
+                                    <constraint firstItem="Ueb-k8-jGA" firstAttribute="top" secondItem="4CW-gl-rwc" secondAttribute="top" constant="5" id="clg-Ct-Jbd"/>
+                                    <constraint firstItem="JoS-VM-sN7" firstAttribute="top" secondItem="Ueb-k8-jGA" secondAttribute="bottom" constant="10" id="qDS-Ar-ZKt"/>
+                                    <constraint firstItem="6bY-kV-1Sf" firstAttribute="top" secondItem="Ueb-k8-jGA" secondAttribute="bottom" constant="10" id="qmT-TJ-oip"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B0V-7i-grs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4CW-gl-rwc" firstAttribute="top" secondItem="B0V-7i-grs" secondAttribute="top" id="5nq-bP-oeK"/>
+                            <constraint firstItem="4CW-gl-rwc" firstAttribute="leading" secondItem="B0V-7i-grs" secondAttribute="leading" id="IIa-lz-pd9"/>
+                            <constraint firstItem="B0V-7i-grs" firstAttribute="trailing" secondItem="4CW-gl-rwc" secondAttribute="trailing" id="O3r-Rt-NJc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="touristEmail" destination="0V2-fr-gl0" id="1TG-vU-2ER"/>
+                        <outlet property="touristId" destination="4xc-OD-MuY" id="yYH-27-WAh"/>
+                        <outlet property="touristLocation" destination="sdo-oa-sVV" id="nan-3f-qtW"/>
+                        <outlet property="touristName" destination="DzJ-Ar-3Xl" id="K0N-Q7-Dsj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6q-1f-mF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1621.7391304347827" y="67.633928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="o8b-TE-qyc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eij-5E-U2z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xX3-4y-Vha">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Z6O-0a-I27"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ak-Zz-O4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="67.633928571428569"/>
         </scene>
     </scenes>
     <resources>

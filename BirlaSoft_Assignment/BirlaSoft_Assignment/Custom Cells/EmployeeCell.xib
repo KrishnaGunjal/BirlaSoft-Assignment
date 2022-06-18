@@ -12,34 +12,41 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmployeeCell" rowHeight="65" id="KGk-i7-Jjw" customClass="EmployeeCell" customModule="BirlaSoft_Assignment" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="325" height="65"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="325" height="65"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G88-dL-phD">
-                        <rect key="frame" x="10" y="10" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY8-uO-ZLd">
-                        <rect key="frame" x="10" y="36" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ecc-Vq-oEm">
+                        <rect key="frame" x="10" y="10" width="41.5" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbX-b8-aZk">
+                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88Q-Uk-QUv">
+                                <rect key="frame" x="0.0" y="30.5" width="41.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="zS1-e1-naD"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="eY8-uO-ZLd" firstAttribute="leading" secondItem="G88-dL-phD" secondAttribute="leading" id="GP4-Qo-Fw6"/>
-                    <constraint firstItem="eY8-uO-ZLd" firstAttribute="top" secondItem="G88-dL-phD" secondAttribute="bottom" constant="5" id="LCC-5S-63m"/>
-                    <constraint firstItem="G88-dL-phD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="fzK-ln-EXz"/>
-                    <constraint firstItem="G88-dL-phD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="x3L-ba-LXh"/>
+                    <constraint firstItem="Ecc-Vq-oEm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="5Tj-vq-3AX"/>
+                    <constraint firstItem="Ecc-Vq-oEm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="7RH-fc-fWF"/>
+                    <constraint firstAttribute="bottom" secondItem="Ecc-Vq-oEm" secondAttribute="bottom" constant="10" id="R8z-ll-afK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="employeeEmailId" destination="eY8-uO-ZLd" id="PYb-Xq-TrY"/>
-                <outlet property="employeeName" destination="G88-dL-phD" id="ena-De-JgS"/>
+                <outlet property="employeeEmailId" destination="88Q-Uk-QUv" id="2UU-b5-ViV"/>
+                <outlet property="employeeName" destination="WbX-b8-aZk" id="aYW-tt-quL"/>
             </connections>
             <point key="canvasLocation" x="135.50724637681159" y="89.397321428571431"/>
         </tableViewCell>

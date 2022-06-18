@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 protocol DataViewModelDelegate {
     func dataRefreshSuccess()
@@ -14,50 +15,43 @@ protocol DataViewModelDelegate {
 }
 
 class ViewModel: NSObject {
-    let persistentContainer = NSPersistentContainer(name: "BirlaSoft_Assignment")
-//    let context = AppDelegate.persistentContainer.viewContext
+    static let persistentContainer = NSPersistentContainer(name: "BirlaSoft_Assignment")
+    let context = ((UIApplication.shared.delegate) as!  AppDelegate).persistentContainer.viewContext
     private var apiServices: APIService!
     var dataViewModelDelegate: DataViewModelDelegate?
-    var employeeData = [EmployeeDetails]()
-    
-    private var persistantDataList = [EmployeeDetails]() {
-        didSet {
-            setData()
-        }
-    }
-    
-    fileprivate func setData() {
-        self.employeeData = persistantDataList
-        self.dataViewModelDelegate?.dataRefreshSuccess()
-    }
     
     public func getDataList() -> Void {
         APIService().getData{ (result) in
             switch result {
             case .failure(let error):
-                print(error.localizedDescription)
                 self.dataViewModelDelegate?.dataFetchError(error: error)
                 
             case .success(let dataList):
-                self.persistantDataList = dataList.data
-//                try? self.saveData(data: dataList)
+                try? self.saveData(data: dataList.data)
                 self.dataViewModelDelegate?.dataRefreshSuccess()
             }
         }
     }
     
-//    private func saveData(data: [EmployeeDetails]) throws {
-//        let album = AlbumDatabase(context: self.context)
-//        for item in data {
-//            album.albumTitle = item.title
-//            album.albumThumbnail = item.thumbnailUrl
-//            album.albumId = item.albumId!
-//            album.id = item.id!
-//            album.imageUrl = item.url
-//
-//            self.context.insert(album)
-//            try self.context.save()
-//        }
-//    }
+    private func saveData(data: [TouristDetails]) throws {
+        for item in data {
+            let tourist = TouristDatabase(context: self.context)
+            tourist.id = Int64(item.id)
+            tourist.name = item.touristName
+            tourist.email = item.touristEmail
+            tourist.createdDate = item.createdat
+            tourist.location = item.touristLocation
+            
+            print(item)
+            
+            self.context.insert(tourist)
+            do{
+                try context.save()
+            } catch let error as NSError {
+                print("Could not save\(error)")
+            }
+        }
+        
+    }
     
 }
